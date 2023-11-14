@@ -1,0 +1,543 @@
+﻿.pantalla-web {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+}
+
+    .pantalla-web .rectangle {
+        position: relative;
+        flex: 1;
+        align-self: stretch;
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .pantalla-web .frame {
+        display: flex;
+        flex-direction: column;
+        width: 302px;
+        height: 284px;
+        align-items: flex-start;
+        padding: 6px 0px;
+        position: absolute;
+        top: 358px;
+        left: 42px;
+    }
+
+    .pantalla-web .div {
+        display: flex;
+        flex-direction: column;
+        width: 534.27px;
+        height: 143.41px;
+        align-items: flex-start;
+        gap: 24px;
+        position: relative;
+        margin-right: -232.41px;
+    }
+
+    .pantalla-web .text-wrapper {
+        position: relative;
+        width: 508px;
+        margin-top: -1px;
+        font-family: "Inter-Bold", Helvetica;
+        font-weight: 700;
+        color: #ababad;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .text-wrapper-2 {
+        position: relative;
+        width: 508px;
+        height: 93px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #08080870;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .frame-2 {
+        display: flex;
+        flex-direction: column;
+        width: 510.01px;
+        height: 128.31px;
+        align-items: flex-start;
+        gap: 29px;
+        position: relative;
+        margin-right: -208.15px;
+    }
+
+    .pantalla-web .text-wrapper-3 {
+        position: relative;
+        width: 508px;
+        height: 53px;
+        margin-top: -1px;
+        font-family: "Inter-Bold", Helvetica;
+        font-weight: 700;
+        color: #ababad;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .text-wrapper-4 {
+        width: 508px;
+        height: 64px;
+        margin-bottom: -16.69px;
+        color: #08080870;
+        font-size: 16px;
+        position: relative;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .frame-3 {
+        position: absolute;
+        width: 535px;
+        height: 756px;
+        top: 110px;
+        left: 373px;
+    }
+
+    .pantalla-web .overlap {
+        position: absolute;
+        width: 539px;
+        height: 663px;
+        top: 2px;
+        left: -2px;
+    }
+
+    .pantalla-web .frame-4 {
+        display: flex;
+        flex-direction: column;
+        width: 535px;
+        align-items: flex-end;
+        gap: 18px;
+        position: absolute;
+        top: 0;
+        left: 2px;
+    }
+
+    .pantalla-web .frame-5 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 25px;
+        padding: 6px 0px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .pantalla-web .frame-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 593px;
+        align-items: flex-end;
+        gap: 4px;
+        position: relative;
+        flex: 0 0 auto;
+        margin-left: -58px;
+    }
+
+    .pantalla-web .frame-6 {
+        position: relative;
+        width: 593px;
+        height: 265px;
+    }
+
+    .pantalla-web .overlap-group {
+        position: absolute;
+        width: 524px;
+        height: 106px;
+        top: 159px;
+        left: 69px;
+    }
+
+    .pantalla-web .frame-7 {
+        display: flex;
+        width: 524px;
+        align-items: flex-start;
+        gap: 18px;
+        position: absolute;
+        top: 53px;
+        left: 0;
+    }
+
+    .pantalla-web .img {
+        position: relative;
+        width: 25px;
+        height: 25px;
+    }
+
+    .pantalla-web .text-wrapper-5 {
+        position: relative;
+        width: 561px;
+        height: 53px;
+        margin-top: -1px;
+        margin-right: -80px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .frame-8 {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 7px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .pantalla-web .frame-9 {
+        position: relative;
+        width: 32px;
+        height: 25px;
+    }
+
+    .pantalla-web .text-wrapper-6 {
+        position: relative;
+        width: 218px;
+        height: 54px;
+        margin-top: -1px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .frame-10 {
+        display: flex;
+        width: 522px;
+        align-items: flex-start;
+        gap: 5px;
+        position: absolute;
+        top: 0;
+        left: 71px;
+    }
+
+    .pantalla-web .text-wrapper-7 {
+        position: relative;
+        width: 561px;
+        height: 53px;
+        margin-top: -1px;
+        margin-right: -69px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .frame-11 {
+        display: flex;
+        width: 524px;
+        align-items: flex-start;
+        gap: 5px;
+        position: absolute;
+        top: 53px;
+        left: 69px;
+    }
+
+    .pantalla-web .text-wrapper-8 {
+        position: relative;
+        width: 561px;
+        height: 53px;
+        margin-top: -1px;
+        margin-right: -67px;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: #000000;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .frame-12 {
+        display: flex;
+        width: 524px;
+        align-items: flex-start;
+        gap: 7px;
+        position: absolute;
+        top: 106px;
+        left: 69px;
+    }
+
+    .pantalla-web .frame-13 {
+        display: flex;
+        flex-direction: column;
+        width: 535px;
+        height: 107px;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 6px 0px;
+        position: relative;
+    }
+
+    .pantalla-web .text-wrapper-9 {
+        position: relative;
+        width: 639px;
+        height: 37px;
+        margin-top: -1px;
+        margin-right: -104px;
+        font-family: "Inter-Bold", Helvetica;
+        font-weight: 700;
+        color: #000000;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .text-wrapper-10 {
+        width: 535px;
+        height: 62px;
+        margin-bottom: -11px;
+        color: #000000;
+        font-size: 20px;
+        position: relative;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .vector {
+        position: absolute;
+        width: 538px;
+        height: 3px;
+        top: 106px;
+        left: -2px;
+    }
+
+    .pantalla-web .frame-14 {
+        display: flex;
+        flex-direction: column;
+        width: 535px;
+        height: 117px;
+        align-items: flex-start;
+        gap: 11px;
+        padding: 6px 0px;
+        position: relative;
+    }
+
+    .pantalla-web .HISTORIAL-LABORAL {
+        position: relative;
+        width: 535px;
+        height: 42px;
+        margin-top: -1px;
+        font-family: "Inter-Bold", Helvetica;
+        font-weight: 700;
+        color: #000000;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .span {
+        font-family: "Inter-Bold", Helvetica;
+        font-weight: 700;
+        color: #000000;
+        font-size: 24px;
+        letter-spacing: 0;
+    }
+
+    .pantalla-web .text-wrapper-11 {
+        font-size: 40px;
+    }
+
+    .pantalla-web .text-wrapper-12 {
+        width: 535px;
+        height: 53px;
+        color: #000000;
+        font-size: 20px;
+        position: relative;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .vector-2 {
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        height: 3px;
+        margin-bottom: -13.5px;
+        margin-left: -1.5px;
+        margin-right: -1.5px;
+    }
+
+    .pantalla-web .frame-15 {
+        display: flex;
+        flex-direction: column;
+        height: 101px;
+        align-items: flex-start;
+        padding: 6px 0px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+    }
+
+    .pantalla-web .text-wrapper-13 {
+        position: relative;
+        width: 527px;
+        height: 53px;
+        margin-top: -1px;
+        font-family: "Inter-Bold", Helvetica;
+        font-weight: 700;
+        color: #000000;
+        font-size: 24px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .text-wrapper-14 {
+        width: 527px;
+        margin-bottom: -11px;
+        color: #000000;
+        font-size: 20px;
+        position: relative;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .vector-3 {
+        position: absolute;
+        width: 539px;
+        height: 3px;
+        top: 269px;
+        left: 0;
+    }
+
+    .pantalla-web .b-OTON {
+        position: absolute;
+        width: 257px;
+        height: 65px;
+        top: 673px;
+        left: 278px;
+    }
+
+    .pantalla-web .component {
+        display: flex;
+        width: 205px;
+        height: 65px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 50px 94px;
+        position: relative;
+        left: 52px;
+        background-color: #36bcb1;
+        border-radius: 70px;
+    }
+
+    .pantalla-web .text-wrapper-15 {
+        position: relative;
+        width: 221px;
+        height: 48px;
+        margin-top: -42.5px;
+        margin-bottom: -40.5px;
+        margin-left: -102.09px;
+        margin-right: -102.09px;
+        font-family: "Inter-ExtraBold", Helvetica;
+        font-weight: 800;
+        color: #ffffff;
+        font-size: 20px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .nombre {
+        position: absolute;
+        width: 535px;
+        top: -77px;
+        left: 0;
+        font-family: "Inter-Regular", Helvetica;
+        font-weight: 400;
+        color: transparent;
+        font-size: 13.2px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .pantalla-web .text-wrapper-16 {
+        color: #ffffff;
+    }
+
+    .pantalla-web .text-wrapper-17 {
+        font-family: "Inter-ExtraBold", Helvetica;
+        font-weight: 800;
+        color: #a94f55;
+        font-size: 30px;
+    }
+
+    .pantalla-web .FOTO {
+        position: absolute;
+        width: 236px;
+        height: 236px;
+        top: 50px;
+        left: 59px;
+    }
+
+    .pantalla-web .overlap-2 {
+        position: relative;
+        height: 236px;
+    }
+
+    .pantalla-web .ellipse {
+        width: 236px;
+        height: 204px;
+        top: 32px;
+        left: 0;
+        background-color: #e1dad8;
+        border-radius: 118px/101.84px;
+        position: absolute;
+        border: 1px solid;
+        border-color: #352d2d;
+        box-shadow: 0px 4px 4px #00000040;
+    }
+
+    .pantalla-web .rectangle-2 {
+        position: absolute;
+        width: 236px;
+        height: 120px;
+        top: 0;
+        left: 0;
+        background-color: #a94f55;
+    }
+
+    .pantalla-web .ellipse-2 {
+        width: 209px;
+        height: 185px;
+        top: 42px;
+        left: 13px;
+        background-color: #ffffff;
+        border-radius: 104.69px/92.4px;
+        position: absolute;
+        border: 1px solid;
+        border-color: #352d2d;
+        box-shadow: 0px 4px 4px #00000040;
+    }{
+    public class estilo
+    {
+    }
+}
