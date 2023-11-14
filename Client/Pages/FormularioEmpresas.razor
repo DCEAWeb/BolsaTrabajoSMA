@@ -1,0 +1,202 @@
+﻿@page "/FormularioEmpresas"
+@using BolsaTrabajoSMA.Shared.Models;
+@inject HttpClient client
+
+<PageTitle>Registra la vacante</PageTitle>
+
+<p class="h1 text-center">¡Sube la vacante de tu empresa!</p>
+
+<div class="container overflow-y-auto">
+    <!--Nombre de Puesto-->
+    <div class="row mt-3">
+        <div class="col">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nombre del Puesto: </span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div>
+        </div>
+    </div>
+
+    <!--Responsabilidades-->
+    <div class="row mt-3">
+        <div class="col">
+            <div class="form-group mb-3">
+                <label for="responsabilities">Indique las responsabilidades que tendrá el puesto: </label>
+                <input type="text" class="form-control" id="responsabilities" placeholder="Escriba las responsabilidades...">
+            </div>
+        </div>
+    </div>
+
+    <!--Cualificaciones y Habilidades-->
+    <div class="row mt-3">
+        <div class="col">
+            <div class="form-group mb-3">
+                <label for="qualifications">Indique las cualificaciones y/o habilidades requeridas para el puesto: </label>
+                <input type="text" class="form-control" id="qualifications" placeholder="Escriba las cualificaciones y/o habilidades...">
+            </div>
+        </div>
+    </div>
+
+    <!--Idiomas-->
+    <div class="row mt-3">
+        <div class="col text-center">
+            <label for="form-check">Seleccione los idiomas requeridos:</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked disabled>
+                <label class="form-check-label" for="inlineCheckbox1">Español</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">Inglés</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                <label class="form-check-label" for="inlineCheckbox3">Francés</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                <label class="form-check-label" for="inlineCheckbox4">Alemán</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+                <label class="form-check-label" for="inlineCheckbox5">Japonés</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+                <label class="form-check-label" for="inlineCheckbox6">Chino</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+                <label class="form-check-label" for="inlineCheckbox7">Otro</label>
+            </div>
+            <!--Agregar opción para que aparezca uno para agregar luego de que seleccione "otro"-->
+        </div>
+    </div>
+
+    <!--Tipo de Contratación-->
+    @if(tipocontratacion.Count() > 0)
+    {
+    <div class="row mt-3">
+        <div class="col">
+            <label for="contractSel">Indique el tipo de contratación:</label>
+            <select class="form-select" id="contractSel" aria-label="Default select example">
+                <option disabled selected>Seleccione una opción</option>
+                    @foreach (var tc in tipocontratacion)
+                {
+                    <option value="@tc.Id">@tc.Tipo</option>                    
+                }
+
+            </select>
+        </div>
+    </div>
+    }
+
+
+    <!--Modalidad-->
+    <div class="row mt-3">
+        <div class="col">
+            <label for="modeSel">Indique la modalidad del puesto:</label>
+            <select class="form-select" id="modeSel" aria-label="Default select example">
+                <option disabled selected>Seleccione una opción</option>
+                <option value="Presencial">Presencial</option>
+                <option value="Virtual">Virtual</option>
+                <option value="Híbrida">Híbrida</option>
+            </select>
+        </div>
+    </div>
+
+    <!--Nivel de Escolaridad-->
+    <div class="row mt-3">
+        <div class="col">
+            <label for="degreeSel">Indique la escolaridad requerida para el puesto: </label>
+            <select class="form-select" id="degreeSel" aria-label="Default select example">
+                <option disabled selected>Seleccione una opción</option>
+                <option value="Primaria">Primaria</option>
+                <option value="Secundaria">Secundaria</option>
+                <option value="Bachillerato">Bachillerato</option>
+                <option value="Licenciatura">Licenciatura</option>
+                <option value="Maestria">Maestria</option>
+                <option value="Doctorado">Doctorado</option>
+            </select>
+        </div>
+    </div>
+
+    <!--Experiencia Requerida-->
+    <div class="row mt-3">
+        <div class="col">
+            <div class="input-group">
+                <label for="numberInput">En caso de ser necesario, ingrese el número de años de experiencia requeridos: </label>
+                <input type="number" id="numberInput" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <!--Sueldo-->
+    <div class="row mt-3">
+        <div class="col">
+            <div class="input-group">
+                <label for="priceInput">Señale el ingreso que percibirá este puesto: </label>
+                <span class="input-group-text">$</span>
+                <input type="text" id="priceInput" class="form-control">
+            </div>
+        </div>
+    </div>
+
+    <!--Lugar-->
+    <div class="row mt-3">
+        <p>Aquí irá una API de localización</p>
+        <!--Preguntar como insertar una API para ingresar localización en el formulario-->
+    </div>
+
+    <!--Beneficios-->
+    <div class="row mt-3">
+        <div class="col">
+            <div class="form-group mb-3">
+                <label for="perks">Indique los beneficios que tendrá el puesto: </label>
+                <input type="text" class="form-control" id="perks" placeholder="Escriba los beneficios...">
+            </div>
+        </div>
+    </div>
+
+    <!--Submit-->
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button type="button" class="btn btn-primary btn-lg">¡Enviar!</button>
+    </div>
+</div>
+
+
+
+@code {
+    // List<NombrePuesto> nombrepuestos = new List<NombrePuesto>();
+    List<TipoContratacion> tipocontratacion = new List<TipoContratacion>();
+    List<Modalidad> modalidades = new List<Modalidad>();
+    List<Escolaridad> escolaridades = new List<Escolaridad>();
+    private UserInfo userInfo = new UserInfo();
+    private NombrePuesto nombrePuestov = new NombrePuesto();
+    private Responsabilidades responsabilidadesv = new Responsabilidades();
+    private Habilidades habilidadesv = new Habilidades();
+
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        // nombrepuestos = await client.GetFromJsonAsync<List<NombrePuesto>>("api/Catalogos/NombrePuesto");
+        tipocontratacion = await client.GetFromJsonAsync<List<TipoContratacion>>("api/Catalogos/TipoContratacion");
+        // modalidades = await client.GetFromJsonAsync<List<Modalidad>>("api/Catalogos/Modalidad");
+        // escolaridades = await client.GetFromJsonAsync<List<Escolaridad>>("api/Catalogos/REscolaridad");
+
+
+    }
+
+    private async Task CrearUsuario()
+    {
+        var response = await client.PostAsJsonAsync("api/Cuentas/NombrePuesto", userInfo);
+        var responseR = await client.PostAsJsonAsync("api/Cuentas/NombrePuesto", responsabilidadesv);
+        var responseH = await client.PostAsJsonAsync("api/Cuentas/Habilidad", habilidadesv);
+
+    }
+
+}
+

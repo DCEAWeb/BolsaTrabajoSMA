@@ -1,0 +1,12 @@
+﻿@page "/logout"
+@using BolsaTrabajoSMA.Client.Auth;
+@inject ILoginService loginService
+@inject HttpClient client
+
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await loginService.Logout();
+    }
+}
