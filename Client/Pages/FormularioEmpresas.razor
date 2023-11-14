@@ -73,52 +73,51 @@
         </div>
     </div>
 
-    <!--Tipo de Contratación-->
-    @if(tipocontratacion.Count() > 0)
-    {
     <div class="row mt-3">
-        <div class="col">
-            <label for="contractSel">Indique el tipo de contratación:</label>
-            <select class="form-select" id="contractSel" aria-label="Default select example">
-                <option disabled selected>Seleccione una opción</option>
+        <!--Tipo de Contratación-->
+        @if(tipocontratacion.Count() > 0)
+        {
+            <div class="col">
+                <label for="contractSel">Indique el tipo de contratación:</label>
+                <select class="form-select" id="contractSel" aria-label="Default select example">
+                    <option disabled selected>Seleccione una opción</option>
                     @foreach (var tc in tipocontratacion)
-                {
-                    <option value="@tc.Id">@tc.Tipo</option>                    
-                }
+                    {
+                        <option value="@tc.Id">@tc.Tipo</option>                    
+                    }
+                </select>
+            </div>
+        }
 
-            </select>
-        </div>
-    </div>
-    }
+        <!--Modalidad-->
+        @if(modalidades.Count() > 0)
+        {
+            <div class="col">
+                <label for="modeSel">Indique la modalidad del puesto:</label>
+                <select class="form-select" id="modeSel" aria-label="Default select example">
+                    <option disabled selected>Seleccione una opción</option>
+                    @foreach (var tm in modalidades)
+                    {
+                        <option value="@tm.Id">@tm.Tipo</option>  
+                    }
+                </select>
+            </div>
+        }
 
-
-    <!--Modalidad-->
-    <div class="row mt-3">
-        <div class="col">
-            <label for="modeSel">Indique la modalidad del puesto:</label>
-            <select class="form-select" id="modeSel" aria-label="Default select example">
-                <option disabled selected>Seleccione una opción</option>
-                <option value="Presencial">Presencial</option>
-                <option value="Virtual">Virtual</option>
-                <option value="Híbrida">Híbrida</option>
-            </select>
-        </div>
-    </div>
-
-    <!--Nivel de Escolaridad-->
-    <div class="row mt-3">
-        <div class="col">
-            <label for="degreeSel">Indique la escolaridad requerida para el puesto: </label>
-            <select class="form-select" id="degreeSel" aria-label="Default select example">
-                <option disabled selected>Seleccione una opción</option>
-                <option value="Primaria">Primaria</option>
-                <option value="Secundaria">Secundaria</option>
-                <option value="Bachillerato">Bachillerato</option>
-                <option value="Licenciatura">Licenciatura</option>
-                <option value="Maestria">Maestria</option>
-                <option value="Doctorado">Doctorado</option>
-            </select>
-        </div>
+        <!--Nivel de Escolaridad-->
+        @if (escolaridades.Count() > 0)
+        {
+            <div class="col">
+                <label for="degreeSel">Indique la escolaridad requerida para el puesto: </label>
+                <select class="form-select" id="degreeSel" aria-label="Default select example">
+                    <option disabled selected>Seleccione una opción</option>
+                    @foreach(var te in escolaridades)
+                    {
+                        <option value="@te.Id">@te.Nivel</option>  
+                    }
+                </select>
+            </div>
+        }
     </div>
 
     <!--Experiencia Requerida-->
@@ -184,8 +183,8 @@
 
         // nombrepuestos = await client.GetFromJsonAsync<List<NombrePuesto>>("api/Catalogos/NombrePuesto");
         tipocontratacion = await client.GetFromJsonAsync<List<TipoContratacion>>("api/Catalogos/TipoContratacion");
-        // modalidades = await client.GetFromJsonAsync<List<Modalidad>>("api/Catalogos/Modalidad");
-        // escolaridades = await client.GetFromJsonAsync<List<Escolaridad>>("api/Catalogos/REscolaridad");
+        modalidades = await client.GetFromJsonAsync<List<Modalidad>>("api/Catalogos/Modalidad");
+        escolaridades = await client.GetFromJsonAsync<List<Escolaridad>>("api/Catalogos/Escolaridad");
 
 
     }
