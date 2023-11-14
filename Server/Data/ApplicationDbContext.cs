@@ -20,7 +20,7 @@ namespace BolsaTrabajoSMA.Server.Data
         public DbSet<TipoContratacion> tipoContrataciones { get; set; }
 
         public DbSet<NombrePuesto> nombrePuestos { get; set; }
-        public DbSet<Escolaridad> escolaridadess { get; set; }
+        public DbSet<Escolaridad> escolaridades { get; set; }
 
         public DbSet<Habilidades> habilidades { get; set; }
 

@@ -33,5 +33,22 @@ namespace BolsaSMA.Server.Controllers
             return tipocontrataciones;
         }
 
+        [HttpGet("Modalidad")]
+        public async Task<List<Modalidad>> Modalidades()
+        {
+            List<Modalidad> modalidades = new List<Modalidad>();
+            modalidades = await context.modalidades.ToListAsync();
+
+            return modalidades;
+        }
+
+        [HttpGet("Escolaridad")]
+        public async Task<List<Escolaridad>> Escolaridades()
+        {
+            List<Escolaridad> escolaridades = new List<Escolaridad>();
+            escolaridades = await context.escolaridades.ToListAsync();
+
+            return escolaridades;
+        }
     }
 }
