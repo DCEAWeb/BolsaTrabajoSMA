@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using BolsaTrabajoSMA.Shared.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 //using System.Collections.Generic;
 //using System.Reflection.Emit;
 
 namespace BolsaTrabajoSMA.Server.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
         //internal object tipocontrataciones;
         public ApplicationDbContext(DbContextOptions options) : base(options)
