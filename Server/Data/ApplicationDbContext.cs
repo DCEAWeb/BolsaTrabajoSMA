@@ -29,6 +29,8 @@ namespace BolsaTrabajoSMA.Server.Data
 
         public DbSet<Modalidad> modalidades { get; set; }
 
+        public DbSet<ListaPaises> listaPaises { get; set; }
+
 
 
 
