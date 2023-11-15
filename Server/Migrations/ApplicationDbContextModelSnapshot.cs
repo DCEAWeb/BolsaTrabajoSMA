@@ -90,6 +90,27 @@ namespace BolsaTrabajoSMA.Server.Migrations
                     b.ToTable("nombrePuestos");
                 });
 
+            modelBuilder.Entity("BolsaTrabajoSMA.Shared.Models.Paises", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Codigo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Pais")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("paises");
+                });
+
             modelBuilder.Entity("BolsaTrabajoSMA.Shared.Models.Responsabilidades", b =>
                 {
                     b.Property<int>("Id")
