@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BolsaTrabajoSMA.Shared.Models
+namespace BolsaTrabajoSMA.Shared.Models.FormularioEmpresa
 {
-    public class Responsabilidades
+    public class TipoContratacion
     {
         public int Id { get; set; }
-        public string Respon { get; set; }
+        public string Tipo { get; set; }
     }
 }

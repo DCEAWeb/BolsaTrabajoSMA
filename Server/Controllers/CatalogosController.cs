@@ -4,9 +4,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BolsaTrabajoSMA.Server.Data;
-using BolsaTrabajoSMA.Shared.Models;
 using BolsaTrabajoSMA.Server.Data;
-using BolsaTrabajoSMA.Shared.Models;
+using BolsaTrabajoSMA.Shared.Models.FormularioEmpresa;
 
 namespace BolsaSMA.Server.Controllers
 {

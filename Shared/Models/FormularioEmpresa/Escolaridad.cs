@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BolsaTrabajoSMA.Shared.Models
+namespace BolsaTrabajoSMA.Shared.Models.FormularioEmpresa
 {
-    public class Modalidad
+    public class Escolaridad
     {
         public int Id { get; set; }
-        public string Tipo { get; set; }
+        public string Nivel { get; set; }
     }
 }
