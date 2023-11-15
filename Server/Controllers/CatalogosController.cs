@@ -45,7 +45,7 @@ namespace BolsaSMA.Server.Controllers
         public async Task<List<Escolaridad>> Escolaridades()
         {
             List<Escolaridad> escolaridades = new List<Escolaridad>();
-            escolaridades = await context.escolaridadess.ToListAsync();
+            escolaridades = await context.escolaridades.ToListAsync();
 
             return escolaridades;
         }

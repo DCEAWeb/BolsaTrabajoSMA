@@ -21,6 +21,8 @@ namespace BolsaTrabajoSMA.Shared.Models
         public string NumExterior { get; set; }
         public string Estado { get; set; }
         public string Municipio { get; set; }
+        public string Aptitudes { get; set; }
+        public string Diplomas { get; set; }
 
     }
 }

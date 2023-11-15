@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using BolsaTrabajoSMA.Shared.Models.FormularioEmpresa;
+using BolsaTrabajoSMA.Shared.Models;
 //using System.Collections.Generic;
 //using System.Reflection.Emit;
 
@@ -31,9 +32,9 @@ namespace BolsaTrabajoSMA.Server.Data
 
         public DbSet<ListaPaises> listaPaises { get; set; }
 
-
-
-
+        public DbSet<Curriculum> curriculums { get; set; }
+        public DbSet<Formacion> formaciones { get; set; }
+        public DbSet<HistorialLaboral> historialLaboral { get; set; }
 
     }
 }
