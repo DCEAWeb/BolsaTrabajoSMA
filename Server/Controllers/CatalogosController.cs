@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BolsaTrabajoSMA.Server.Data;
-using BolsaTrabajoSMA.Server.Data;
 using BolsaTrabajoSMA.Shared.Models.FormularioEmpresa;
 using BolsaTrabajoSMA.Shared.Models;
 
@@ -50,5 +49,22 @@ namespace BolsaSMA.Server.Controllers
 
             return escolaridades;
         }
-    }
+
+        [HttpPost("NombrePuesto")]
+        public async Task<int> NuevoPuesto(NombrePuesto nuevoPuesto)
+        {
+            context.Add(nuevoPuesto);
+            await context.SaveChangesAsync();
+            return nuevoPuesto.Id;
+        }
+
+        [HttpPost("Responsabilidad")]
+        public async Task<int> NuevaResponsabilidad(Responsabilidades nuevaResponsabilidad)
+        {
+            context.Add(nuevaResponsabilidad);
+            await context.SaveChangesAsync();
+            return nuevaResponsabilidad.Id;
+        }
+
+}
 }

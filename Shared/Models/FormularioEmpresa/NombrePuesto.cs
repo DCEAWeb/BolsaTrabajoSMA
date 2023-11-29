@@ -10,6 +10,6 @@ namespace BolsaTrabajoSMA.Shared.Models.FormularioEmpresa
 
     {
         public int Id { get; set; }
-        public string NombrePuest { get; set; }
+        public string nombrePuesto { get; set; }
     }
 }
