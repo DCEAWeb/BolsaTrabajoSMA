@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using BolsaTrabajoSMA.Server.Data;
 using BolsaTrabajoSMA.Server.Data;
 using BolsaTrabajoSMA.Shared.Models.FormularioEmpresa;
+using BolsaTrabajoSMA.Shared.Models;
 
 namespace BolsaSMA.Server.Controllers
 {

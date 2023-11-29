@@ -42,6 +42,21 @@ namespace BolsaTrabajoSMA.Server.Controllers
             }
         }
 
+        [HttpPost("Registro")]
+        public async Task<ActionResult<UserToken>> Registro([FromBody] UserInfo model)
+        {
+            var user = new IdentityUser { UserName = model.UserName, Email = model.Email };
+            var result = await userManager.CreateAsync(user, model.Password);
+            if (result.Succeeded)
+            {
+                return BuildToken(model);
+            }
+            else
+            {
+                return BadRequest(result.Errors);
+            }
+        }
+
         [HttpPost("Login")]
         public async Task<ActionResult<UserToken>> Login([FromBody] UserInfo model)
         {

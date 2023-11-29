@@ -4,6 +4,7 @@
 @using System.Text.Json;
 @inject HttpClient client
 @inject ILoginService loginService
+@inject NavigationManager Navegador
 
 <h3>Login</h3>
 
@@ -44,6 +45,7 @@
         {
             userToken = await response.Content.ReadFromJsonAsync<UserToken>();
             await loginService.Login(userToken.Token);
+            Navegador.NavigateTo("/");
         }
     }
 }

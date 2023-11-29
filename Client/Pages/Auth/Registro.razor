@@ -3,6 +3,7 @@
 @using BolsaTrabajoSMA.Shared.Models;
 @inject HttpClient client
 @inject ILoginService loginService
+@inject NavigationManager Navegador
 
 <h3>Registro</h3>
 
@@ -38,11 +39,14 @@
 
     private async Task CrearUsuario()
     {
-        var response = await client.PostAsJsonAsync("api/Cuentas/SignUp", userInfo);
+        var response = await client.PostAsJsonAsync("api/Cuentas/Registro", userInfo);
         if (response.StatusCode == System.Net.HttpStatusCode.OK)
+
         {
             userToken = await response.Content.ReadFromJsonAsync<UserToken>();
             await loginService.Login(userToken.Token);
+            Navegador.NavigateTo("/");
+
         }
     }
 }
