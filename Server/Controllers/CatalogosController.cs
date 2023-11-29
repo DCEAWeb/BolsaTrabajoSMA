@@ -7,6 +7,7 @@ using BolsaTrabajoSMA.Server.Data;
 using BolsaTrabajoSMA.Shared.Models.FormularioEmpresa;
 using BolsaTrabajoSMA.Shared.Models;
 
+
 namespace BolsaSMA.Server.Controllers
 {
     //Agregamos seguridad de autenticación a nuestro controlador
